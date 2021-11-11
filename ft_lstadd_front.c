@@ -6,13 +6,14 @@
 /*   By: rosferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 16:16:43 by rosferna          #+#    #+#             */
-/*   Updated: 2021/11/10 16:21:59 by rosferna         ###   ########.fr       */
+/*   Updated: 2021/11/11 17:49:06 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	lst = ft_lstnew(new);
+	new->next = *lst;
+	*lst = new;
 }
