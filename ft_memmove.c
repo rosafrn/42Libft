@@ -6,7 +6,7 @@
 /*   By: rosferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 15:22:49 by rosferna          #+#    #+#             */
-/*   Updated: 2021/11/08 17:46:15 by rosferna         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:24:22 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t			i;
 	unsigned char	*dst1;
 	unsigned char	*src1;
-
+	
+	if (!dst && !src)
+		return (NULL);
 	dst1 = (unsigned char *)dst;
 	src1 = (unsigned char *)src;
 	i = 1;
