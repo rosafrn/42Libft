@@ -6,7 +6,7 @@
 /*   By: rosferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:42:07 by rosferna          #+#    #+#             */
-/*   Updated: 2021/11/04 17:53:57 by rosferna         ###   ########.fr       */
+/*   Updated: 2021/11/15 15:25:03 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,5 @@ void	ft_putnbr_fd(int n, int fd)
 	s = ft_itoa(n);
 	ft_putstr_fd(s, fd);
 }
+
+
