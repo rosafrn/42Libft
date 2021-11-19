@@ -6,7 +6,7 @@
 #    By: rosferna <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/28 22:05:30 by rosferna          #+#    #+#              #
-#    Updated: 2021/11/10 20:16:53 by rosferna         ###   ########.fr        #
+#    Updated: 2021/11/19 20:04:26 by rosferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,27 +54,27 @@ SRCS_B = ft_lstnew.c\
 			ft_lstclear.c\
 			ft_lstiter.c\
 			ft_lstmap.c
-OBJS = ${SRCS:.c=.o}
-OBJS_B= ${SRCS_B:.c=.o}
+OBJS = $(SRCS:.c=.o)
+OBJS_B= $(SRCS_B:.c=.o)
 INCS = libft.h
 NAME = libft.a
 
-${NAME}: ${OBJS}
-	ar rcs ${NAME} ${OBJS}
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-all: ${NAME}
+all: $(NAME)
 
-bonus: ${NAME} ${OBJS_B}
-	ar rcs ${NAME} ${OBJS_B}
+bonus: $(NAME) $(OBJS_B)
+	ar rcs $(NAME) $(OBJS_B)
 
 .c.o:
-	gcc -Wall -Wextra -Werror -I ${INCS} -c $< -o ${<:c=o} 
+	gcc -Wall -Wextra -Werror -I $(INCS) -c $< -o $(<:c=o) 
 
 clean:
-	rm -rf ${OBJS} ${OBJS_B}
+	rm -rf $(OBJS) $(OBJS_B)
 
 fclean: clean
-	rm -rf ${NAME}
+	rm -rf $(NAME)
 
 re: fclean all
 
