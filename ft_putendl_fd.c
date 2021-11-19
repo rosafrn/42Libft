@@ -6,7 +6,7 @@
 /*   By: rosferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:35:01 by rosferna          #+#    #+#             */
-/*   Updated: 2021/11/04 17:46:04 by rosferna         ###   ########.fr       */
+/*   Updated: 2021/11/19 14:34:40 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	unsigned int	i;
 
 	i = 0;
+	if (!s || fd < 0)
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

@@ -6,7 +6,7 @@
 /*   By: rosferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 14:54:58 by rosferna          #+#    #+#             */
-/*   Updated: 2021/10/31 15:02:18 by rosferna         ###   ########.fr       */
+/*   Updated: 2021/11/19 15:25:10 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if ((unsigned char)c >= 'A' && (unsigned char)c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		c += 32;
 	return (c);
 }

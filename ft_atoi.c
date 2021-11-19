@@ -6,7 +6,7 @@
 /*   By: rosferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:07:41 by rosferna          #+#    #+#             */
-/*   Updated: 2021/11/04 20:29:29 by rosferna         ###   ########.fr       */
+/*   Updated: 2021/11/19 15:44:52 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	nbr;
+	int			sign;
+	long long	nbr;
 
 	sign = 1;
 	nbr = 0;
@@ -31,10 +31,14 @@ int	ft_atoi(const char *str)
 	}
 	while (*str > 47 && *str < 58)
 	{
-		nbr = nbr * 10 + *str - 48;
-		str++;
+		nbr = nbr * 10;
+		nbr += (sign * (*(str++) - 48));
+		if (nbr > 2147483647)
+			return (-1);
+		if (nbr < -2147483648)
+			return (0);
 	}
-	return (nbr * sign);
+	return (nbr);
 }
 
 /*int main(void)

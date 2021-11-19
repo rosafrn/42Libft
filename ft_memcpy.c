@@ -6,7 +6,7 @@
 /*   By: rosferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 12:54:20 by rosferna          #+#    #+#             */
-/*   Updated: 2021/11/15 16:20:40 by rosferna         ###   ########.fr       */
+/*   Updated: 2021/11/19 15:46:29 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*dst1;
 	unsigned char	*src1;
-	
+
 	if (!dst && !src)
 		return (NULL);
 	dst1 = (unsigned char *)dst;

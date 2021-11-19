@@ -6,26 +6,26 @@
 /*   By: rosferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 22:29:42 by rosferna          #+#    #+#             */
-/*   Updated: 2021/11/10 20:16:34 by rosferna         ###   ########.fr       */
+/*   Updated: 2021/11/19 16:00:11 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <string.h>
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <string.h>
+# include <stdio.h>
+# include <ctype.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;	
 
-int 	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

@@ -6,7 +6,7 @@
 /*   By: rosferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 19:12:06 by rosferna          #+#    #+#             */
-/*   Updated: 2021/11/08 23:07:42 by rosferna         ###   ########.fr       */
+/*   Updated: 2021/11/19 15:49:07 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	size;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	while (*s1 && ft_strchr(set, s1[start]))
 		start++;

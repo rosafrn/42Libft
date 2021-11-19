@@ -6,7 +6,7 @@
 /*   By: rosferna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:30:37 by rosferna          #+#    #+#             */
-/*   Updated: 2021/11/01 19:11:49 by rosferna         ###   ########.fr       */
+/*   Updated: 2021/11/19 15:51:14 by rosferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 	size_t	size;
 
+	if (!s1 || !s2)
+		return (NULL);
 	size = ft_strlen(s1) + ft_strlen(s2) + 1;
 	str = (char *)ft_calloc(1, size);
 	if (!str)
